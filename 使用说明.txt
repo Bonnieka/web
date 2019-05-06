@@ -1,0 +1,8 @@
+1、在数据库中创建一个名叫admin的库，utf-8的编码。
+2、导入sql中admin.sql。
+3、分别在painter_website和painter_server中用npm install安装依赖。
+4、依赖安装完成后在painter_server，输入命令npm start，启动服务器。
+5、服务器启动完后在painter_website中，输入命令npm start，启动前端服务器。
+6、启动完成后，访问http://localhost:8080,打开项目，在首页的最下面点击进入后台管理系统，进行作品的添加等操作。
+
+后台管理系统 账号admin，密码123456

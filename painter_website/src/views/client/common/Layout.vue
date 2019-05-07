@@ -1,82 +1,21 @@
 <template>
     <div class="layout-container">
-        <div class="nav-container">
-                <div class="center">
-                    <el-menu
-                        :router=true
-                        class="nav-menu"
-                    >
-                        <el-menu-item
-                            v-for="(item, index) in navs"
-                            :key="index"
-                            :index="item"
-                            :class="{active: item != '/' && path.indexOf(item) !== -1}"
-                        >
-                        {{pathMaps[item].title}}
-                        </el-menu-item>
-                    </el-menu>
-                    <!-- <ul class="clearfix" @click="navChnage">
-                        <li v-for="(item,index) in navs" :class="{active: item != '/' && path.indexOf(item) !== -1}" :data-index="item" :key="index">{{pathMaps[item].title}}</li>
-                    </ul> -->
-                </div>
-        </div>
-        <div class="main-container">
-            <h3>{{pathMaps[path].title}}</h3>
-            <h4>{{pathMaps[path].subTitle}}</h4>
+        <head-content></head-content>
+        <div style="margin-top:120px;">
             <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script>
+import HeadContent from '../index/HeadContent'
+
 export default {
   name: "Layout",
-    data() {
-        return {
-            navs: ['/','/profile','/works','/album','/news','/contact'],
-            pathMaps: {
-                '/': {
-                    title: '首页'
-                },
-                '/profile': {
-                    title: '个人简介',
-                    subTitle: "Personal profile"
-                },
-                '/works': {
-                    title: '作品展示',
-                    subTitle: 'Exhibition of works'
-                },
-                '/works/detail': {
-                    title: '作品展示',
-                    subTitle: 'Exhibition of works'
-                },
-                '/album': {
-                    title: '相册',
-                    subTitle: 'Photo album'
-                },
-                '/news': {
-                    title: '新闻中心',
-                    subTitle: 'News Center'
-                },
-                '/news/detail': {
-                    title: '新闻中心',
-                    subTitle: 'News Center'
-                },
-                '/contact': {
-                    title: '联系我们',
-                    subTitle: 'Contact us'
-                },
-                
-            }
-        }
-    },
-    computed: {
-        path() {
-            return this.$route.path
-        }
-    },
-    methods: {
-    },
+  components:{
+      HeadContent
+  },
+   
 }
 </script>
 
@@ -88,9 +27,9 @@ export default {
     .layout-container {
         background-color: #f6f0e2;
         min-height: calc(100% - 100px);
-        background-image: url('../../../assets/img/bg2.png');
-        background-size: 100%;
-        background-repeat: no-repeat;
+        background-image: url('../../../assets/img/bg.jpg');
+        // background-size: 100%;
+        background-repeat: repeat;
         height: 100%;
         overflow: auto;
     }

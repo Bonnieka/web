@@ -72,14 +72,14 @@ router.post('/show', function(req, res, next) {
 
 //作品添加
 router.post('/add', function(req, res, next) {
-    let type = req.body.type;      //类型
+    // let type = req.body.type;      //类型
     let url = req.body.url;        //图片地址
     let title = req.body.title;     //图片标题
     let show = req.body.show;       //是否首页展示该作品
     let count =  req.body.count;    //作品浏览量
     let pic_name = req.body.pic_name; //图片名称
     // let id =  new Date().getTime(); //作品id
-    query("INSERT INTO works (work_title,pic_url,work_type,home_show,view_count,pic_name) VALUES ('"+title+"','"+url+"','"+type+"','"+show+"',"+count+",'"+pic_name+"')", [1], function(err,results,fields){ 
+    query("INSERT INTO works (work_title,pic_url,home_show,view_count,pic_name) VALUES ('"+title+"','"+url+"','"+show+"',"+count+",'"+pic_name+"')", [1], function(err,results,fields){ 
        if(results && results.affectedRows==1){
             res.send("1");
        }else{
@@ -116,13 +116,13 @@ router.post('/delete', function(req, res, next) {
 //作品编辑
 router.post('/edit', function(req, res, next) {
     let id =  req.body.id;    //作品id
-    let type = req.body.type;  //类型
+    // let type = req.body.type;  //类型
     let url = req.body.url;     //图片地址
     let title = req.body.title;     //图片标题
     let show = req.body.show;       //是否首页展示该作品
-    let count =  req.body.count;    //作品浏览量
+    // let count =  req.body.count;    //作品浏览量
     let pic_name = req.body.pic_name; //图片名称
-    query("UPDATE works SET work_title='"+title+"',view_count='"+count+"',pic_url='"+url+"',work_type='"+type+"',home_show='"+show+"',pic_name='"+pic_name+"' WHERE work_id="+id+"", [1], function(err,results,fields){
+    query("UPDATE works SET work_title='"+title+"',pic_url='"+url+"',home_show='"+show+"',pic_name='"+pic_name+"' WHERE work_id="+id+"", [1], function(err,results,fields){
         if(results.affectedRows==1 && !err){
             res.send("1");
         }else{

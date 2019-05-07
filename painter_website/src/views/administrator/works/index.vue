@@ -1,6 +1,6 @@
 <template>
   <div class="clearfix">
-    作品类型：
+    <!-- 作品类型：
      <el-select v-model="type" placeholder="请选择"  @change="handleChange">
         <el-option
           v-for="item in options"
@@ -9,8 +9,8 @@
           :value="item.value"
          >
         </el-option>
-     </el-select>
-    <el-button type="deflaut" class="pull-right" @click="addWork">添加作品</el-button>
+     </el-select> -->
+    <el-button style="margin-bottom:20px;" type="deflaut" class="pull-right" @click="addWork">添加作品</el-button>
      <el-table
       :data="tableData"
       style="width: 100%;margin-top:30px;border:2px solid #ccc;">
@@ -32,10 +32,10 @@
         label="浏览量"
         >
       </el-table-column>
-      <el-table-column
+      <!-- <el-table-column
         prop="work_type"
         label="作品类型">
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column
         prop="home_show"
         label="首页展示">

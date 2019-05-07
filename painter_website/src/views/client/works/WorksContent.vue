@@ -7,7 +7,7 @@
             @select="handleTypeChange"
             class="type-menu"
         >
-            <el-menu-item
+            <!-- <el-menu-item
                 v-for="(item, index) in types"
                 :key="index"
                 :index="item"
@@ -15,7 +15,7 @@
                 :class="{active: type == item}"
             >
             {{item}}
-            </el-menu-item>
+            </el-menu-item> -->
         </el-menu>
         <div class="works-content">
             <div class="works-item" v-for="(item, index) in data" :key="index" @click="handleWorkClick(item)">
@@ -60,7 +60,7 @@ export default {
             total:0,  //总数
             currentPage:1, //当前页,
             data: [], //作品数据,
-            types: ['全部', '长江三峡', '创作', '临摹对比']
+            // types: ['全部', '长江三峡', '创作', '临摹对比']
         }
     },
     methods: {

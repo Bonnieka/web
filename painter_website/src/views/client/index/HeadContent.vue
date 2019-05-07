@@ -1,7 +1,7 @@
 <template>
 	<header>
 		<section class="index-banner">
-			<img style="width: 100%;height: 200px;" :src="require('assets/img/xk.jpg')" alt="banner">
+			<img style="width: 100%;height: 220px;" :src="require('assets/img/headbg.jpg')" alt="banner">
 		</section>
 		<nav class="index-nav-bar">
 			<el-menu :router=true class="index-nav-content clearfix">
@@ -38,10 +38,10 @@
 						path: '/news',
 						title: '新闻中心'
 					},
-					{
-						path: '/contact',
-						title: '联系我们'
-					}
+					// {
+					// 	path: '/contact',
+					// 	title: '联系我们'
+					// }
 				]
 			}
 		},
@@ -73,9 +73,10 @@
 		line-height: 40px;
 		text-align: center;
 		// margin-top: 20px;
-		border-bottom: 2px solid #cbcbcb;
-		border-top: 2px solid #cbcbcb;
-    margin-top: 30px;
+		// border-bottom: 2px solid #cbcbcb;
+		// border-top: 2px solid #cbcbcb;
+		margin-top: 30px;
+		background: rgba(255, 255, 255, 0.4);
 	}
 
 	.index-nav-content {

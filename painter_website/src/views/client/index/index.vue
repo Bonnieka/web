@@ -37,9 +37,9 @@ export default {
 
   .index-container {
     background-color: #fff;
-//     background-image: url('../../../assets/img/index_bg.png');
+    background-image: url('../../../assets/img/bg.jpg');
 //     background-size: 100%;
-//     background-repeat: no-repeat;
+    background-repeat: repeat;
   }
 </style>
 

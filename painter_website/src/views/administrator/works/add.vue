@@ -21,7 +21,7 @@
                 
             </div>
         
-            <div class="item">
+            <!-- <div class="item">
                 <p>作品类型：</p>
                 <div class="content">
                     <el-select v-model="value" placeholder="请选择">
@@ -34,7 +34,7 @@
                 </el-select>
                 </div>
                 
-            </div>   
+            </div>    -->
 
             <div class="item">
                 <p>作品名称：</p>
@@ -52,12 +52,12 @@
                 </div>
             </div>  
 
-            <div class="item">
+            <!-- <div class="item">
                 <p>作品浏览量:</p>
                 <div class="content">
                     <el-input type="text" v-model="count" placeholder="请输入作品浏览量" @keyup.native="handleKeyup"></el-input>
                 </div>
-            </div>  
+            </div>   -->
             
             <div class="item">
                 <el-button type="success" class="pull-right" @click="submit">提交</el-button>
@@ -88,9 +88,9 @@ export default {
           value: "长江三峡",
           label: "长江三峡"
         }],
-      value: "", //下拉
+      // value: "", //下拉
       radio: "0", //单选
-      count: "",
+      // count: "",
       url:"", //作品地址，
       title:"",
       pic_name:"", //图片名称
@@ -126,11 +126,11 @@ export default {
     },
     submit(){
         worksAdd({
-            type:this.value,
+            // type:this.value,
             url:this.url,
             title:this.title,
             show:this.radio,
-            count:this.count,
+            count:0,
             pic_name:this.pic_name
         })
     },

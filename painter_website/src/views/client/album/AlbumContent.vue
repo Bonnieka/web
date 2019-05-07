@@ -104,7 +104,7 @@ export default {
         }
         &>.photo-desc {
             text-align: center;
-            color: #b23e2f;
+            color: #222;
             font-size: 15px;
             width: 250px;
             white-space: nowrap;

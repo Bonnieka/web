@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <div class="login-box">
-        <p class="title">欢迎来到何笑勤网站后台管理系统</p>
+        <p class="title">欢迎来到叶梓颐网站后台管理系统</p>
         <div class="login-item">
           <span class="login-item-title">账号:</span>
         <el-input type="text" v-model="username" placeholder="请输入管理员账号"></el-input>
@@ -75,8 +75,9 @@ export default {
 .bg{
   height: 100%;
   width:100%;
-  background:url('../../../assets/img/adminbg.jpg') no-repeat 0 0;
-  background-size:cover; 
+  background:url('../../../assets/img/bg.jpg');
+  /* background-size:cover;  */
+  background-repeat: repeat;
 }
 </style>
 

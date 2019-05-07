@@ -21,7 +21,7 @@
                 
             </div>
         
-            <div class="item">
+            <!-- <div class="item">
                 <p>作品类型：</p>
                 <div class="content">
                     <el-select v-model="value" placeholder="请选择">
@@ -34,7 +34,7 @@
                 </el-select>
                 </div>
                 
-            </div>   
+            </div>    -->
 
             <div class="item">
                 <p>作品名称：</p>
@@ -52,12 +52,12 @@
                 </div>
             </div>  
 
-            <div class="item">
+            <!-- <div class="item">
                 <p>作品浏览量:</p>
                 <div class="content">
                     <el-input type="" v-model.number="count" placeholder="请输入作品浏览量" @keyup.native="handleKeyup"></el-input>
                 </div>
-            </div>  
+            </div>   -->
             
             <div class="item">
                 <el-button type="success" class="pull-right" @click="submit">提交</el-button>
@@ -92,21 +92,21 @@ export default {
   data() {
     return {
       fileList: [], //回显用的
-       options: [ {
-        value: '创作',
-        label: '创作'
-      }, {
-          value: "临摹对比",
-          label: "临摹对比"
-        },
-        {
-          value: "长江三峡",
-          label: "长江三峡"
-        }],
+    //    options: [ {
+    //     value: '创作',
+    //     label: '创作'
+    //   }, {
+    //       value: "临摹对比",
+    //       label: "临摹对比"
+    //     },
+    //     {
+    //       value: "长江三峡",
+    //       label: "长江三峡"
+    //     }],
       work_id:0, //作品id
-      value: "", //下拉
+    //   value: "", //下拉
       radio: "否", //单选
-      count: "",
+    //   count: "",
       url:"", //作品地址，
       title:"",
       pic_name:""
@@ -144,11 +144,11 @@ export default {
     submit(){
        work_edit({
             id:this.work_id,
-            type:this.value,
+            // type:this.value,
             url:this.url,
             title:this.title,
             show:this.radio,
-            count:this.count,
+            // count:this.count,
             pic_name:this.pic_name
         });
     },

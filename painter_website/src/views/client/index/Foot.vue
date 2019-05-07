@@ -1,6 +1,6 @@
 <template>
     <div class="footer-container" style="position:relative">
-        <h3>联系我们</h3>
+        <!-- <h3>联系我们</h3>
         <h4>Contact us</h4>
         <hr class="solid-hr-b" />
         <h5>联系我们</h5>
@@ -8,7 +8,7 @@
         <div class="footer-content">
             <div class="links-l">
                 <span class="attention">关注</span>
-                <a class="attention-link" target="_blank" href="https://weibo.com/u/6465589904"><i class="weibo"></i></a>
+                <a class="attention-link" target="_blank" href="https://weibo.com/yeziyiyeziyi?is_hot=1"><i class="weibo"></i></a>
                 <a class="attention-link" href=""><i class="qq"></i></a>
                 <a class="attention-link" href=""><i class="weixin"></i></a>
             </div>
@@ -19,11 +19,11 @@
             </div>
             <div class="adds-r">
                 <p>邮编：620360</p>
-                <!-- <p>地址：18183272222</p> -->
+                <p>地址：18183272222</p>
             </div>
-        </div>
+        </div> -->
         <div class="copyright">
-             <small>Copyright©洪雅县笑勤文化交流有限公司 All Rights Reserved. 蜀ICP备18002074号</small>
+             <small>Copyright©xxxxxxxxx All Rights Reserved. 蜀ICP备xxxxxx号</small>
         </div>
         <a href="javascript:;" class="go-admin" @click="$router.push('/admin/home')">进入后台管理系统</a>
     </div>
@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+    .footer-container{
+        margin-top: 100px;
+    }
     h3 {
         font-size: 35px;
         color: #222;

@@ -21,6 +21,15 @@
                 </section> -->
             </section>
             <section class="shows">
+                 <div class="photo-shows2">
+                    <hr class="solid-line"/>
+                    <div class="clearfix">
+                        <h5 class="pull-left">作品展示</h5>
+                        <span class="pull-right more" @click="handleMoreClick">更多</span>
+                    </div>
+         
+                </div>
+
                 <el-carousel
                     class="photo-shows1"
                     :interval="4000"
@@ -37,34 +46,9 @@
                     </el-carousel-item>
                     <h5 class="wrks-title-1">{{imgArrs[activeIndex]? imgArrs[activeIndex].work_title : ''}}</h5>
                 </el-carousel>
-                <div class="photo-shows2">
-                    <hr class="solid-line"/>
-                    <div class="clearfix">
-                        <h5 class="pull-left">作品展示</h5>
-                        <span class="pull-right more" @click="handleMoreClick">更多</span>
-                    </div>
-                    <div class="photo-shows2-container">
-                        <hr class="dash-line"/>
-                         <swiper class="photo-shows2-content" :options="swiperOption" ref="mySwiper">
-                            <!-- slides -->
-                            <swiperSlide v-for="(img, index) in imgArrs" :key="index">
-                                <div @click="handleImgClick(img)" class="img-wrapper2" :style="{'background-image': 'url('+img.pic_url +')'}">
-                                </div>
-                                <p class="img-title-2" :title="img.work_title">{{img.work_title}}</p>
-                            </swiperSlide>
-                            <!-- Optional controls -->
-                            <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
-                            <!-- <div class="swiper-scrollbar"   slot="scrollbar"></div> -->
-                        </swiper>
-                        <div class="swiper-button-prev" slot="button-prev"></div>
-                        <div class="swiper-button-next" slot="button-next"></div>
-                    </div>
-                </div>
+               
             </section>
       </div>
-     <!-- <div class="cjsx" @click="handleCjsxClick">
-          <img :src="require('assets/img/cjsx_1.jpg')" alt="长江三峡卷轴" />
-      </div> -->
   </article>
 </template>
 
@@ -202,7 +186,7 @@ export default {
 
     .portrait-content {
         width: 275px;
-        height: 360px;
+        height: 300px;
     }
     .img-title-2 {
         text-align: center;
@@ -238,8 +222,8 @@ export default {
 
     .summary {
         width:  280px;
-        height: 720px;
-        padding: 0 15px;
+        height: 600px;
+        padding: 10px 15px;
         overflow: hidden;
         background-color: #f5f5f5;
         display: inline-block;
@@ -248,7 +232,7 @@ export default {
 
     .shows {
         width: 690px;
-        height: 720px;
+        height: 639px;
         overflow: hidden;
         display: inline-block;
         margin-left: 17px;
@@ -268,7 +252,7 @@ export default {
     }
 
     .photo-shows2 {
-        height: 360px;
+        height: 80px;
         width: 100%;
     }
     .img-wrapper2 {

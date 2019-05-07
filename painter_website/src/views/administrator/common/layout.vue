@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
       <header class="header">
-          <span class="title pull-left"><i class="el-icon-menu" style="margin-right:10px;"></i>何笑勤个人网站后台管理系统</span>
+          <span class="title pull-left"><i class="el-icon-menu" style="margin-right:10px;"></i>叶梓颐个人网站后台管理系统</span>
           <div class="pull-right">
               <span style="margin-right:20px;cursor:pointer;font-size:14px;" @click="$router.push('/')">
                 <i class="el-icon-location-outline"></i><span style="margin-left:5px;">回到网站首页</span>
@@ -98,8 +98,8 @@ export default {
   height: 100%;
   /* width: 100%; */
   overflow-y: auto;
-  background: url(../../../assets/img/adminbg2.jpg) no-repeat;
-  background-size:cover; 
+  /* background: url(../../../assets/img/adminbg2.jpg) no-repeat; */
+  /* background-size:cover;  */
   box-sizing: border-box;
 }
 

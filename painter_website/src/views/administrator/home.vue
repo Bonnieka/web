@@ -1,7 +1,7 @@
 <template>
     <div class="welcome">
         <span class="tip">
-            管理员，欢迎来到何笑勤个人网站的后台管理系统!
+            管理员，欢迎来到叶梓颐个人网站的后台管理系统!
         </span>
     </div>
     

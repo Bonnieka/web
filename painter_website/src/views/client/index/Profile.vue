@@ -2,6 +2,11 @@
   <article class="clearfix">
       <h3>个人简介</h3>
       <h4>Personal profile</h4>
+      <div class="video">
+         <video  style="width:100%;height:100%" src="../../../assets/video.mp4" controls="controls">
+            您的浏览器不支持 video 标签。
+        </video>
+      </div>
       <div class="profile-content">
             <section class="summary">
                 <div class="portrait-content">
@@ -332,5 +337,10 @@ export default {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+    .video{
+        margin:10px auto;
+        width:772px;
+        height: 443px;
     }
 </style>
